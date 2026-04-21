@@ -1,1 +1,82 @@
-/* Add styles here */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#game-container {
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+canvas {
+  background-color: #000;
+  display: block;
+  cursor: none; /* Hide cursor while playing */
+}
+
+#ui-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+#score-display {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#game-over-screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 40px;
+  border-radius: 12px;
+  border: 2px solid #ff4757;
+  pointer-events: auto;
+  min-width: 250px;
+}
+
+#game-over-screen h1 {
+  color: #ff4757;
+  margin-bottom: 10px;
+}
+
+#restart-button {
+  background-color: #2ed573;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 20px;
+}
+
+#restart-button:hover {
+  background-color: #7bed9f;
+}
+
+.hidden {
+  display: none !important;
+}
